@@ -7,8 +7,8 @@ import { dataContext } from '../../context/UserContext';
 
 function Sidebar() {
 
-    const [extend, setExtend] = useState(false); // desktop expand
-    const [open, setOpen] = useState(false);     // mobile open
+    const [extend, setExtend] = useState(false); 
+    const [open, setOpen] = useState(false);   
     const [isMobile, setIsMobile] = useState(false);
 
     const { sent, prevPrompt, newChat } = useContext(dataContext);
@@ -25,7 +25,7 @@ function Sidebar() {
 
     return (
         <>
-            {/* 🔥 Mobile hamburger */}
+            {/* Mobile hamburger */}
             {isMobile && (
                 <GiHamburgerMenu 
                     id='ham' 
@@ -33,7 +33,7 @@ function Sidebar() {
                 />
             )}
 
-            {/* 🔥 Overlay */}
+            
             {open && isMobile && (
                 <div className="overlay" onClick={() => setOpen(false)} />
             )}
