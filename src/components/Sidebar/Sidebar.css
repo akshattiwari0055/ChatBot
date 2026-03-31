@@ -1,0 +1,82 @@
+.sidebar {
+    height: 100vh;
+    width: 250px;
+    padding: 20px 10px;
+    background-color: var(--background-color);
+    color: var(--color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+/* icons */
+.sidebar svg {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+}
+
+/* chat icon spacing */
+#chat {
+    margin-left: 10px;
+}
+
+/* buttons */
+.newchat,
+.recent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.newchat {
+    background-color: rgb(127,131,134);
+}
+
+.newchat:hover,
+.recent:hover {
+    background-color: rgb(82, 85, 86);
+}
+
+/* 🔥 MOBILE */
+#ham {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1100;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 220px;
+        height: 100vh;
+        transform: translateX(-100%);
+        z-index: 1000;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+}
+
+/* overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+}

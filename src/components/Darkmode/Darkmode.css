@@ -1,0 +1,20 @@
+.darkmode-button {
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--btn-background-color);
+    transition: all 0.2s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+}
+.darkmode-button svg {
+    width: 30px;
+    height: 30px;
+    color: var(--btn-color);
+}
+.darkmode-button:hover {
+    background-color: var(--hover-btn-background-color);
+    cursor: pointer;
+}
